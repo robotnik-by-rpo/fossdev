@@ -10,7 +10,15 @@ def test_div():
     result = 3
     assert div(a,b) == result
 
+def test_div_zero():
+    a, b = 2,0
+    try: 
+        div(a,b)
+        assert("test didn't pass")
+    except:
+        print("test was passed")
 
 if __name__ == "__main__":
     test_div()
     test_sum()
+    test_div_zero()

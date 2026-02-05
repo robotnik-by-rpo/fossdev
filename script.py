@@ -1,4 +1,4 @@
-def sum(a: int, b: int)->int:
+def sum_num(a: int, b: int)->int:
     return a+b
 
 def div(a: int, b: int)->int:
