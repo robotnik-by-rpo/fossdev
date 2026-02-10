@@ -18,7 +18,15 @@ def test_div_zero():
     except:
         print("test was passed")
 
+def test_division_pro():
+    try: 
+        div([1,2,3],[4,5,6])
+        print("test list-division failed")
+    except:
+        print("Test list-division passed")
+
 if __name__ == "__main__":
     test_div()
     test_sum()
     test_div_zero()
+    test_division_pro()
