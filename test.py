@@ -18,15 +18,23 @@ def test_div_zero():
     except:
         print("test was passed")
 
-def test_devision_pho():
+
+def test_devision_pro():
     try:
         div("a","b")
         assert False
     except ValueError as e:
         print("Test string-division fails:",e)
 
+    try: 
+        div([1,2,3],[4,5,6])
+        print("test list-division failed")
+    except:
+        print("Test list-division passed")
+
 if __name__ == "__main__":
     test_div()
     test_sum()
     test_div_zero()
-    test_devision_pho()
+    test_devision_pro()
+
