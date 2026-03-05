@@ -67,6 +67,13 @@ def test_tax_calculate():
     print("Test UNGUDDED TAX CALCULATOR PASSED")
     assert calculate_tax_bugged(2.340) == 0.35
 
+
+def test_negative_income():
+    try:
+        calculate_tax(-100)
+    except ValueError as e:
+        print("Test NEGATIVE INCOME PASSED")
+
 def test_addition_commutative():
     assert add(9,5) == 14
     assert add(5.9) == 14
@@ -79,3 +86,4 @@ if __name__ == "__main__":
     test_addition_overkill()
     test_addition_commutative()
     test_tax_calculator_pasticide()
+    test_negative_income()
