@@ -24,7 +24,12 @@ def test_addition_with_bug():
     # finally we found error 
     # assert add_with_bug(7,6) == 13
 
+def test_addition_duplicate():
+    assert add(6,7) == 6 + 7
+    print("Test DUPLICATION ADDITION PASSED")
+
 
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
+    test_addition_duplicate()
