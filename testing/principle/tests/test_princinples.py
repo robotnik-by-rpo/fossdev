@@ -8,6 +8,7 @@
 # Тесты не должны дублировать логику тестируемого кода
 # тесты должны покрывать "класстеры" входных параметров
 # Тесты должны обнаруживать новые ошибки
+# Тестовые функции должны тестировать логические блоки
 # тесты покрывают как успешные так и ошибочные кейсы
 
 from math_demo import add, add_with_bug
@@ -49,7 +50,10 @@ def test_addition_clussters():
     print("test CLUSTERS PASSED")
 
 
-
+def test_addition_commutative():
+    assert add(9,5) == 14
+    assert add(5.9) == 14
+    print("Test COMMUTATIVE PASSED")
 
                
 
