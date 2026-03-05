@@ -7,11 +7,11 @@
 # Тесты не должны использовать ВСЕ наборы входных параметров
 # Тесты не должны дублировать логику тестируемого кода
 # тесты должны покрывать "класстеры" входных параметров
-# Тесты должны обнаруживать новые ошибки
+# Тесты должны обнаруживать новые ошибки, использование одних и тех же типов данных может препятствовать этому
 # Тестовые функции должны тестировать логические блоки
 # тесты покрывают как успешные так и ошибочные кейсы
 
-from math_demo import add, add_with_bug
+from math_demo import add, add_with_bug, calculate_tax_bugged, calculate_tax
 
 def test_addition():
     assert add(2,2)==4
@@ -49,16 +49,33 @@ def test_addition_clussters():
     assert add(5,5) == 14 
     print("test CLUSTERS PASSED")
 
+def test_tax_calculator_pasticide():
+    assert calculate_tax_bugged(1000) == 150
+    assert calculate_tax_bugged(100) == 15
+    assert calculate_tax_bugged(10) == 1.5
+    assert calculate_tax_bugged(1) == 0.15
+    assert calculate_tax_bugged(234) == 35.1
+    print("Test TAX CALCULATOR PASSED")
+    assert calculate_tax_bugged(2.340) == 0.35
+
+def test_tax_calculate():
+    assert calculate_tax_bugged(1000) == 150
+    assert calculate_tax_bugged(100) == 15
+    assert calculate_tax_bugged(10) == 1.5
+    assert calculate_tax_bugged(1) == 0.15
+    assert calculate_tax_bugged(234) == 35.1
+    print("Test UNGUDDED TAX CALCULATOR PASSED")
+    assert calculate_tax_bugged(2.340) == 0.35
 
 def test_addition_commutative():
     assert add(9,5) == 14
     assert add(5.9) == 14
     print("Test COMMUTATIVE PASSED")
 
-               
-
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
     test_addition_duplicate()
     test_addition_overkill()
+    test_addition_commutative()
+    test_tax_calculator_pasticide()
