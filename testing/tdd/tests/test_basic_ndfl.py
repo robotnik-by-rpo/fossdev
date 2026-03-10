@@ -4,13 +4,13 @@ from ndfl import calculate_ndfl
 # TODO make test to 
 
 def test_ndfl_tier_1_basic():
-    assert calculate_ndfl(2_000_000) == 200_200
+    assert calculate_ndfl(2_000_000) == 260_200
 
 def test_ndfl_tier_2_basic():
     assert calculate_ndfl(4_000_000) == 552_000
 
 def test_ndfl_tier_3_basic():
-    assert calculate_ndfl(10_000_000) == 1_002_000
+    assert calculate_ndfl(10_000_000) == 1_602_000
 
 def test_ndfl_tier_4_basic():
     assert calculate_ndfl(30_000_000) == 5_402_000
