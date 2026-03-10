@@ -1,10 +1,10 @@
 from ndfl import calculate_ndfl
-
+import pytest
 
 # TODO make test to 
 
 def test_ndfl_tier_1_basic():
-    assert calculate_ndfl(2_000_000) == 260_200
+    assert calculate_ndfl(2_000_000) == 260_000
 
 def test_ndfl_tier_2_basic():
     assert calculate_ndfl(4_000_000) == 552_000
@@ -18,5 +18,10 @@ def test_ndfl_tier_4_basic():
 def test_ndfl_tier_5_basic():
     assert calculate_ndfl(60_000_000) == 11_602_000
 
+def test_ndfl_fails_negative_income():
+    calculate_ndfl(-1000)
 
+@pytest.mark.xfail
+def test_ndfl_fails_negative_income():
+    calculate_ndfl(-1000)
 
