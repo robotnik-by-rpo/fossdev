@@ -1,10 +1,8 @@
-help:
-	@echo "This makefile for repo-level activity"
-
+.DEFAULT_GOAL := help
 create-practice:
-ifndef PRACTICE:
+ifndef PRACTICE
 	$(error must pass val via PRACTICE)
-endif:
+endif
 	mkdir -p ${PRACTICE}
 	@echo "Creating practice"
 
@@ -16,6 +14,10 @@ endif:
 
 
 remove-practice:
-	rm -rf demo-practice
+ifndef PRACTICE
+	$(error must pass val via PRACTICE)
+endif
+	rmdir /s /q ${PRACTICE}
+	@echo "Removing practice"
 
 
