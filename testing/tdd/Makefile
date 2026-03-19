@@ -1,0 +1,18 @@
+create-structure: 
+	mkdir demo-practice
+	mkdir demo-practice/src
+	mkdir demo-practice/tests
+	mkdir demo-practice/docs
+	mkdir demo-practice/README.md
+	touch docs/DOMAIN.md
+	touch src/.gitkeep tests/.gitkeep
+
+install-dep:
+	pip install -r requitements.txt
+    
+install:
+	pip install -e .
+
+test-pytest:
+	python -m pytest
+
