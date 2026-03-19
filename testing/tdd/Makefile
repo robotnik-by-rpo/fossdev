@@ -16,3 +16,4 @@ install:
 test-pytest:
 	python -m pytest
 
+test: install-dep install test-pytest

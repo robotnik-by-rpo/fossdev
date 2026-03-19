@@ -14,6 +14,13 @@ endif
 
 # Монорепозиторий
 
+create-env:
+	python -m venv myenv && \
+	myenv\Scripts\activate
+
+deactive-env:
+	deactivate
+
 remove-practice:
 ifndef PRACTICE
 	$(error must pass val via PRACTICE)
