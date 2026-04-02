@@ -17,3 +17,5 @@ documentation for details.
 
    QUICKSTART
    USAGE
+   api/modules
+   api/sales

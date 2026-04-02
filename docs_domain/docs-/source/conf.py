@@ -15,13 +15,19 @@ release = '02.04.2026'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "myst_parser"
+    "myst_parser",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.viewcode"
 ]
 
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "markdown"
 }
+
+autosummary_genereate = True
 
 templates_path = ['_templates']
 exclude_patterns = []

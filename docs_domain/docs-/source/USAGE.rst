@@ -2,7 +2,7 @@ using project sales
 ===================
 
 * ``read_data(file)``
-* `/report(file. report)``
+* ``/report(file. report)``
 
 Example:
 .. code-block:: python
