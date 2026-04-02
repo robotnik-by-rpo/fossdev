@@ -32,7 +32,7 @@ def _parse_record(line: str) -> dict[str, any] | None:
     return {"n": product_name, "c": category, "a": unit_price, "q": quantity} 
 
 
-def read_data(path):
+def read_data(path) -> list:
     res = []  # final list
     with open(path, "r", encoding="utf-8") as f:  # open file
         for x in f:  # go over lines
@@ -42,7 +42,7 @@ def read_data(path):
     return res  # return result
 
 
-def total(ds, d=0):
+def total(ds, d=0) -> int:
     s = 0  # total sum
     for i in ds:  # loop all rows
         s = s + i["a"] * i["q"]  # add price * quantity
@@ -51,7 +51,7 @@ def total(ds, d=0):
     return s  # give answer
 
 
-def find_big(ds, t):
+def find_big(ds, t) -> list:
     out = []  # rows that are big enough
     for i in ds:  # each row
         x = i["a"] * i["q"]  # row money
@@ -60,7 +60,7 @@ def find_big(ds, t):
     return out  # done
 
 
-def by_category(ds):
+def by_category(ds) -> dict:
     m = {}  # category to money
     for i in ds:  # each row
         k = i["c"]  # category name
