@@ -2,4 +2,6 @@
 *.egg-info
 .env
 .venv
-/build
+build
+doctrees
+html
