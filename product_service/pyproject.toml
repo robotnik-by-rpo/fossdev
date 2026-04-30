@@ -1,17 +1,16 @@
 [project]
-name = "order-service"
+name = "product-service"
 version = "0.0.1"
-description = "Application for serving users order"
+description = "product service for user"
 authors = [
     {name = "Monke",email = "chikindin99@inbox.ru"}
 ]
-license = "MIT"
+license = "MTI"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi (>=0.136.1,<0.137.0)",
-    "uvicorn[standart] (>=0.46.0,<0.47.0)",
-    "httpx (>=0.28.1,<0.29.0)"
+    "uvicorn[standart] (>=0.46.0,<0.47.0)"
 ]
 
 
